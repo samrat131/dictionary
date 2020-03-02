@@ -379,3 +379,5 @@ riot = danga / hangama
 
 inflation = mudra sfiti
 Accolades = proshongsha / tarif
+embargo = nishedhakka
+tipped off = gopone jante pere
