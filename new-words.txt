@@ -381,3 +381,5 @@ inflation = mudra sfiti
 Accolades = proshongsha / tarif
 embargo = nishedhakka
 tipped off = gopone jante pere
+pandemic = prethibi bapi / mohamari
+Betel = pan
