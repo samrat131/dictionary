@@ -383,3 +383,5 @@ embargo = nishedhakka
 tipped off = gopone jante pere
 pandemic = prethibi bapi / mohamari
 Betel = pan
+avail = upokar / luv / shubidha
+Eminent = bishisto / mohan
