@@ -401,3 +401,6 @@ vigilant = sojag / sabdhan
 citing = udahoron deya
 recede = kome jawa / sore jawa
 errand = prerito barta / task job chores
+
+odious = grinno / nekkarjonok
+wicked = durniti porayon / nitihin
