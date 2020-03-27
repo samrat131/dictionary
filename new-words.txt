@@ -87,8 +87,8 @@ Verbatim = word by word / akhorik vabe
 deteriorate = get worse, become progressively worse
 house compounds = ghorer angina
 edible = vojja
-clinced = champion hoya
-clinc = somorthon
+clinched = champion hoya
+clinch = somorthon
 
 evangelist = dhormo procharok
 demonstration = prodorshon
@@ -178,7 +178,7 @@ vandalise = vangchur (destroy gov/pvt property)
 fierce = hingsro / ferocious
 savage = oshavbo /borbor / hingsro
 woe(s) = durdosha / durvaggo
-shiver = kapa / thihoron
+shiver = kapa / shihoron
 evoke = ahoban kora ***
 Ironic = bidropattok
 irony = bidrup
@@ -404,3 +404,6 @@ errand = prerito barta / task job chores
 
 odious = grinno / nekkarjonok
 wicked = durniti porayon / nitihin
+dissension = motanoikko
+coarse = amarjito / ashovvo
+porcupine = shojaru
