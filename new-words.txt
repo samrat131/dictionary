@@ -407,3 +407,4 @@ wicked = durniti porayon / nitihin
 dissension = motanoikko
 coarse = amarjito / ashovvo
 porcupine = shojaru
+complacent = atto suntusto
