@@ -408,3 +408,10 @@ dissension = motanoikko
 coarse = amarjito / ashovvo
 porcupine = shojaru
 complacent = atto suntusto
+
+riling = uttokto/crodhito kora
+scramble = hamguri diye arohon / force to stay together
+purview = aaota / baokota /alaka
+avert = protihoto kora
+
+spoof = protarona kora / hoax
