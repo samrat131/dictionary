@@ -415,3 +415,5 @@ purview = aaota / baokota /alaka
 avert = protihoto kora
 
 spoof = protarona kora / hoax
+havoc = bepok dhonsho
+scarcity = ghatti / ovab / duvikkho

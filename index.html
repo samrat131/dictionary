@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dictonary</title>
+	<style>
+		div.wrap {
+			width: 800px;
+			margin: 0 auto;
+		}
+		table {
+			width: 100%;
+		}
+		td {
+			font-size: 1em;
+			color: #ccc;
+			border: 1px solid #222;
+		}
+		td.eng, td.bng, td.translate {
+			width: 30%;
+			padding: 1.5em;
+			text-transform: capitalize;
+		}
+		td.translate, td.search {
+			width: 10%;
+			text-align: center;
+		}
+		.show {
+			float: right;
+			cursor: pointer;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap" id="app"></div>
+
+	<script>
+		var tr = '<table>'
+		fetch('./new-words.txt')
+  			.then(response => response.text())
+  			.then(data => {
+  				let arr  = data.split("\n")
+
+  				arr.forEach( function(item, index) {
+  					let word = item.split("=")
+  					tr += `
+  					<tr>
+						<td class="eng">
+							${word[0]}
+						</td>
+
+						<td class="translate"><span onclick="document.getElementById('word-${index}').style.display = 'inline-block';" class="show">Show</span></td>
+
+						<td class="search">
+							<a target="_blank" href="https://www.google.com/search?q=${word[0]}+meaning">Google</a>
+						</td>
+
+						<td class="bng">
+							<span id="word-${index}" class="word" style="display: none;">
+								${word[1]}
+							</span>
+						</td>
+					</tr>
+  					`
+  				})
+  				tr += '</table>'
+  				document.getElementById('app').innerHTML = tr
+  			})
+	</script>
+</body>
+</html>
