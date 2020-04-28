@@ -39,6 +39,10 @@
 					{{getWord(item)}}
 				</td>
 
+				<td class="search">
+					<a target="_blank" :href="getLink(item)">Google</a>
+				</td>
+
 				<td class="bng">
 					<span :id="index" class="word" style="display: none;">
 						{{getMeaning(item)}}
@@ -66,6 +70,9 @@
 			methods: {
 				getWord(item){
 					return item.split('=')[0]
+				},
+				getLink(item){
+					return 'https://www.google.com/search?q='+this.getWord(item)+'+meaning'
 				},
 				getMeaning(item){
 					return item.split('=')[1]
