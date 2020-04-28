@@ -417,3 +417,4 @@ avert = protihoto kora
 spoof = protarona kora / hoax
 havoc = bepok dhonsho
 scarcity = ghatti / ovab / duvikkho
+incapacitated = cholte firte okhhom
