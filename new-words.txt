@@ -418,3 +418,7 @@ spoof = protarona kora / hoax
 havoc = bepok dhonsho
 scarcity = ghatti / ovab / duvikkho
 incapacitated = cholte firte okhhom
+expatriate = nirbashito kora
+salvation = uddhar / poritran / rokkha
+departed = proyato
+depart = prosthan
