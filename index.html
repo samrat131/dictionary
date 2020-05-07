@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>dictonary</title>
 	<style>
 		div.wrap {
@@ -16,7 +18,7 @@
 			border: 1px solid #222;
 		}
 		td.eng, td.bng, td.translate {
-			width: 30%;
+			width: 20%;
 			padding: 1.5em;
 			text-transform: capitalize;
 		}
@@ -28,6 +30,11 @@
 			float: right;
 			cursor: pointer;
 			text-align: center;
+		}
+		@media screen and (max-width: 767px) {
+			div.wrap {
+				width: 100%;
+			}
 		}
 	</style>
 </head>
