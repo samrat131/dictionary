@@ -422,3 +422,6 @@ expatriate = nirbashito kora
 salvation = uddhar / poritran / rokkha
 departed = proyato
 depart = prosthan
+
+stalwart = odommo / shahoshi/ bolistho
+convenor = ahovayok
