@@ -446,3 +446,11 @@ proximity = noikotto / shanniddho
 concocted = shajano / songo boddo
 patronage = prestho poshokota / somorthon
 clique = chokro / uopdol /gushti
+
+bemoaned = hahakar/bilap kora
+abruptly = hothath / achomka / sohosha
+blunder = gorutoro vul
+lethargic = alosh / oboshonno
+apathy = udashinota / oniha
+whims = kheyal / dharona
+resurging = ponoruddhar / punuray briddy
