@@ -454,3 +454,9 @@ lethargic = alosh / oboshonno
 apathy = udashinota / oniha
 whims = kheyal / dharona
 resurging = ponoruddhar / punuray briddy
+
+sceptical = sondeho probon / obisshashi
+burglary = shidh kete chori
+capsize = ulte jawa
+collid = song ghorsho
+head-on = matha / mokho mukhi
