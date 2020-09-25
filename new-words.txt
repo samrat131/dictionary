@@ -460,3 +460,11 @@ burglary = shidh kete chori
 capsize = ulte jawa
 collid = song ghorsho
 head-on = matha / mokho mukhi
+defame = man hani kora
+
+decomposed = poche jawa / bikkrito
+outskirt = shimato onchol
+stench = durgondho
+on the run = polayon roto
+
+triumphant = bjoyee / sofolkam
