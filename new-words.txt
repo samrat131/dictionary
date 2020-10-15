@@ -468,3 +468,7 @@ stench = durgondho
 on the run = polayon roto
 
 triumphant = bjoyee / sofolkam
+jubilant = ullashito
+derailed = line chuto
+perpetrators = oporadhi
+catkins = kashful
