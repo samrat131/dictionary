@@ -1,4 +1,4 @@
-grappling = lorai kora
+﻿grappling = lorai kora
 Agitating = andolon roto
 newsmen = news reporter
 abstention = biroti / strick
@@ -473,3 +473,10 @@ jubilant = ullashito
 derailed = line chuto
 perpetrators = oporadhi
 catkins = kashful
+
+slacken = obohela kora / jhimano
+declining = nimno gami / poronto
+prevail = biraj kora
+evade = aariye jawa
+slum dwellers = bosti bashi
+unwarrant = ajoukit
