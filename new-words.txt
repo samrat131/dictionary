@@ -480,3 +480,9 @@ prevail = biraj kora
 evade = aariye jawa
 slum dwellers = bosti bashi
 unwarrant = ajoukit
+
+caricature = bengo chitro
+intercept =  path e badha
+sever = bicchino kora
+huge contingent = bishal dol
+behead = shirocched
