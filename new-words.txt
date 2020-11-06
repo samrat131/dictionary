@@ -492,6 +492,8 @@ hoist = uttolon
 Tripartite = tripokhio
 
 eviction = ucched
+expulsion = tarano / bitaron
 relinquish = chere deya
 demarcate = shimana nirdharon kora
 stretches = prosharito
+barbed wire = kata taar
