@@ -497,3 +497,6 @@ relinquish = chere deya
 demarcate = shimana nirdharon kora
 stretches = prosharito
 barbed wire = kata taar
+
+ditche = pani jawar path
+stream = jol sroat
