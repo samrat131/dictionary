@@ -498,5 +498,9 @@ demarcate = shimana nirdharon kora
 stretches = prosharito
 barbed wire = kata taar
 
-ditche = pani jawar path
+ditche = pani jawar path / khal
 stream = jol sroat
+outcry = chitkar / hoichoi / kolahol
+muzzle = mokh bondho korano
+perennial = bohu borsho jibi / chirojibi
+remedy = aaroggo protikar
