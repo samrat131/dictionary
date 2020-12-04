@@ -504,3 +504,10 @@ outcry = chitkar / hoichoi / kolahol
 muzzle = mokh bondho korano
 perennial = bohu borsho jibi / chirojibi
 remedy = aaroggo protikar
+
+qualms = shonsoy
+respite = obokash / biram / oboshor
+outset = shuchona / aaromvo / sutropat
+vehemently = tibrovabe
+sigh = dirgho shash
+zealots = dhormandho
