@@ -511,3 +511,7 @@ outset = shuchona / aaromvo / sutropat
 vehemently = tibrovabe
 sigh = dirgho shash
 zealots = dhormandho
+
+vortex = ghurni
+dismal = biroktikor
+reprimand = tiroshkar
