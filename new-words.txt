@@ -14,7 +14,7 @@ supply crunch = sorboraho sonkot
 scant = nitanto / olpo
 wrapping up = morok ummochon
 
-circumnavigate = �sail or travel all the way around
+circumnavigate = sail or travel all the way around
 offspring = child or children
 
 expat = probashi
@@ -516,3 +516,5 @@ vortex = ghurni
 dismal = biroktikor
 reprimand = tiroshkar
 throng = vir kora
+demise = death / transfer of property by will
+irreparable = apuronio
