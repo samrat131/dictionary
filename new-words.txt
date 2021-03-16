@@ -515,3 +515,4 @@ zealots = dhormandho
 vortex = ghurni
 dismal = biroktikor
 reprimand = tiroshkar
+throng = vir kora
