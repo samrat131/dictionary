@@ -518,3 +518,7 @@ reprimand = tiroshkar
 throng = vir kora
 demise = death / transfer of property by will
 irreparable = apuronio
+
+whereabouts = hodis / current address
+mayhem = marpit / mara-mari
+lax = shithil
