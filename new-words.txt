@@ -522,7 +522,11 @@ irreparable = apuronio
 whereabouts = hodis / current address
 mayhem = marpit / mara-mari
 lax = shithil
+vain = bertho / nirorthok
+strangulation = shash-rodh
 
 dodge = avoid (someone or something) by a sudden quick movement
 guile = cholona
 trickery = chalaki
+
+spokesperson = mukho-parto
