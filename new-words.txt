@@ -533,3 +533,4 @@ spokesperson = mukho-parto
 tremor = kaponi
 jolt = jahkuni
 trample = podo-dolito
+upbringing = lalon palon
