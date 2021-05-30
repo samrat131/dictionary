@@ -532,3 +532,4 @@ trickery = chalaki
 spokesperson = mukho-parto
 tremor = kaponi
 jolt = jahkuni
+trample = podo-dolito
