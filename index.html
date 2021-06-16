@@ -2,83 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>dictonary</title>
-	<style>
-		body {
-			background-color: #222;
-			color: #ccc;
-		}
-		div.wrap {
-			width: 800px;
-			margin: 0 auto;
-		}
-		table {
-			width: 100%;
-		}
-		td {
-			font-size: 1em;
-			border: 1px solid #333;
-		}
-		td.eng, td.bng, td.translate {
-			width: 20%;
-			padding: 1.5em;
-			text-transform: capitalize;
-		}
-		td.translate, td.search {
-			width: 10%;
-			text-align: center;
-		}
-		.show {
-			float: right;
-			cursor: pointer;
-			text-align: center;
-		}
-		@media screen and (max-width: 767px) {
-			div.wrap {
-				width: 100%;
-			}
-			td.eng, td.bng, td.translate {
-				padding: 0.5em;
-			}
-		}
-	</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>My Dictonary App</title>
 </head>
 <body>
 	<div class="wrap" id="app"></div>
-
-	<script>
-		var tr = '<table>'
-		fetch('./new-words.txt')
-  			.then(response => response.text())
-  			.then(data => {
-  				let arr  = data.split("\n")
-
-  				arr.forEach( function(item, index) {
-  					let word = item.split("=")
-  					tr += `
-  					<tr>
-						<td class="eng">
-							${word[0]}
-						</td>
-
-						<td class="translate"><span onclick="document.getElementById('word-${index}').style.display = 'inline-block';" class="show">Show</span></td>
-
-						<td class="search">
-							<a target="_blank" href="https://www.google.com/search?q=${word[0]}+meaning">Google</a>
-						</td>
-
-						<td class="bng">
-							<span id="word-${index}" class="word" style="display: none;">
-								${word[1]}
-							</span>
-						</td>
-					</tr>
-  					`
-  				})
-  				tr += '</table>'
-  				document.getElementById('app').innerHTML = tr
-  			})
-	</script>
+	<script src="js/script.js"></script>
 </body>
 </html>
