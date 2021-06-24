@@ -534,3 +534,4 @@ tremor = kaponi
 jolt = jahkuni
 trample = podo-dolito
 upbringing = lalon palon
+incarcerate = imprison or confine / কারারুদ্ধ করা
