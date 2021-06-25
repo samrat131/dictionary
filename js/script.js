@@ -44,6 +44,6 @@ fetch('./new-words.txt')
     document.getElementById('app').innerHTML = table
   })
 
-fetch('/.netlify.app/.netlify/functions/hello')
+fetch('/.netlify/functions/hello')
   .then(response => response.json())
   .then(data => console.log(data));
