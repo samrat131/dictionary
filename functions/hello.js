@@ -4,7 +4,7 @@ exports.handler = async event => {
   
   const subject = event.queryStringParameters.name || 'World'
 
-  mongoose.connect('mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority', {
+  mongoose.connect('', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
