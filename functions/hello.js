@@ -22,39 +22,33 @@ exports.handler = async function (event, context) {
   }
 } */
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const postSchema = Schema({ title: String, body: String})
-const Posts = mongoose.model('Posts', postSchema)
+const { MongoClient } = require("mongodb");
 
-exports.handler = async event => {
-  
-  // const subject = event.queryStringParameters.name || 'World'
+// Replace the uri string with your MongoDB deployment's connection string.
+const uri =
+  "mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority";
 
-  mongoose.connect('mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
-  }, () => {
-    console.log('db connected');
-  });
+const client = new MongoClient(uri);
 
-  const posts = Posts.find({},'title body', (err, docs) => {
-    
-    if(err) {
-      return {
-        statusCode: 500,
-        error: JSON.stringify({error : err })
-      }
-    }
+async function run() {
+  try {
+    await client.connect();
+
+    const database = client.db('nodejs_api_db');
+    const movies = database.collection('movies');
+
+    // Query for a movie that has the title 'Back to the Future'
+    const query = { title: 'hello' };
+    const movie = await movies.findOne(query);
 
     return {
       statusCode: 200,
-      body: JSON.stringify(docs)
+      body: JSON.stringify(movie)
     }
-  })
-  
-  // mongoose.connection.close();
-  mongoose.disconnect();
+
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
 }
+run().catch(console.dir);
