@@ -30,7 +30,7 @@ const uri =
 
 const client = new MongoClient(uri);
 
-async function run() {
+exports.handler = async function (event, context) {
   try {
     await client.connect();
 
@@ -51,4 +51,3 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
