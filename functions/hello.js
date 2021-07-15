@@ -22,23 +22,24 @@ exports.handler = async function (event, context) {
   }
 } */
 
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 exports.handler = async event => {
   
   const subject = event.queryStringParameters.name || 'World'
 
-  mongoose.connect('mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
-  }, () => {
-    console.log('db connected');
-  });
-
-  mongoose.connection.close();
-  mongoose.disconnect();
+  // mongoose.connect('mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority', {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
+  //   useFindAndModify: false,
+  //   useCreateIndex: true
+  // }, () => {
+  //   console.log('db connected');
+  // });
+  
+  // mongoose.connection.close();
+  // mongoose.disconnect();
+  console.log('hello test');
 
   return {
     statusCode: 200,
