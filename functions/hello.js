@@ -22,43 +22,39 @@ exports.handler = async function (event, context) {
   }
 } */
 
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const postSchema = Schema({ title: String, body: String})
+const Posts = mongoose.model('Posts', postSchema)
 
 exports.handler = async event => {
   
-  const subject = event.queryStringParameters.name || 'World'
+  // const subject = event.queryStringParameters.name || 'World'
 
-  // mongoose.connect('mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority', {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  //   useFindAndModify: false,
-  //   useCreateIndex: true
-  // }, () => {
-  //   console.log('db connected');
-  // });
+  mongoose.connect('mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+  }, () => {
+    console.log('db connected');
+  });
+
+  const posts = Posts.find({},'title body', (err, docs) => {
+    
+    if(err) {
+      return {
+        statusCode: 500,
+        error: JSON.stringify({error : err })
+      }
+    }
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(docs)
+    }
+  })
   
   // mongoose.connection.close();
-  // mongoose.disconnect();
-  console.log('hello test');
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify(
-      [{
-        id: 1,
-        title: "hello",
-        content: "lorem ipsum dolor sit amet"
-      },
-      {
-        id: 2,
-        title: "hello 2",
-        content: "lorem ipsum dolor sit amet 2"
-      },
-      {
-        id: 3,
-        title: "hello 3",
-        content: "lorem ipsum dolor sit amet 3"
-      }]
-    ),
-  }
+  mongoose.disconnect();
 }
