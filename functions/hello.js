@@ -3,6 +3,7 @@ const { MongoClient } = require('mongodb')
 // Connection URL
 const url = 'mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority'
 const client = new MongoClient(url)
+var findResult = '';
 
 // Database Name
 const dbName = 'nodejs_api_db'
@@ -14,7 +15,7 @@ async function main() {
   const db = client.db(dbName)
   const collection = db.collection('posts')
 
-  const findResult = await collection.find({}).toArray()
+  findResult = await collection.find({}).toArray()
   console.log('Found documents =>', findResult)
 
   return 'done.'
