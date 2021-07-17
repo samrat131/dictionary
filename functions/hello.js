@@ -1,4 +1,5 @@
 const { MongoClient } = require('mongodb')
+require('dotenv').config();
 
 const url = 'mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority'
 
@@ -26,6 +27,6 @@ exports.handler = async function (event, context) {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(findResult)
+    body: process.env.TEST
   }
 }
