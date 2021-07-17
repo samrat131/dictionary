@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/samrat131/dictionary#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "mongodb": "^4.0.0"
   }
 }
