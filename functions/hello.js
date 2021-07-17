@@ -1,6 +1,8 @@
 const { MongoClient } = require('mongodb')
 
-const client = new MongoClient(process.env.DB_CONNECTION_URL)
+const url = 'mongodb+srv://sam123:sam123@cluster0.6io27.mongodb.net/nodejs_api_db?retryWrites=true&w=majority'
+
+const client = new MongoClient(url)
 
 exports.handler = async function (event, context) {
 
