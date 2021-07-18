@@ -14,12 +14,7 @@ exports.handler = async function (event, context) {
   const collection = db.collection('words')
 
   if (mode == 'write') {
-    await collection.insertOne([
-      {
-        english: eng,
-        bangla: ban
-      }
-    ])  
+    await collection.insertOne( { english: eng, bangla: ban } )  
   }
 
   let findResult
