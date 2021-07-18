@@ -6,17 +6,17 @@ const client = new MongoClient(process.env.DB_CONNECTION_URL)
 exports.handler = async function (event, context) {
 
   await client.connect()
-  const db = client.db('nodejs_api_db')
-  const collection = db.collection('posts')
+  const db = client.db('dictionary')
+  const collection = db.collection('words')
 
   const insertResult = await collection.insertMany([
     {
-      title: "hello this is test",
-      body: "this is the body"
+      english: "Incarcerate",
+      bangla: "কারারুদ্ধ করা"
     },
     {
-      title: "hello this is test2",
-      body: "this is the body2"
+      english: "Upbringing",
+      bangla: "lalon palon kora"
     }
   ])
 
