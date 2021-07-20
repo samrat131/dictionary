@@ -16,6 +16,10 @@ fetch('./new-words.txt')
       }
       
       let word = item.split("=")
+
+      fetch(`/.netlify/functions/dbio?mode=write&eng=${word[0]}&ban=${word[1]}`)
+        .then(response => response.json())
+        .then(data => console.log(data));
       
       table += 
         `<tr>
