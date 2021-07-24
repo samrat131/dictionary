@@ -44,6 +44,6 @@ fetch('./new-words.txt')
     document.getElementById('app').innerHTML = table
   })
 
-fetch('/.netlify/functions/hello')
+fetch('https://nostalgic-bell-6b3f17.netlify.app/.netlify/functions/dbio?mode=read')
   .then(response => response.json())
   .then(data => console.log(data));
