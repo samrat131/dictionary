@@ -536,3 +536,4 @@ trample = podo-dolito
 upbringing = lalon palon
 incarcerate = imprison or confine / কারারুদ্ধ করা
 indomitable = aadommo
+embezzle = aatoshat / আত্মসাৎ
