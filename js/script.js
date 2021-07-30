@@ -2,7 +2,8 @@ function show(index) {
   document.getElementById('word-'+index).style.display = 'inline-block';
 }
 
-fetch('./words.json')
+// fetch('./words.json')
+fetch('/.netlify/functions/db?mode=read')
   .then(response => response.json())
   .then(data => {
     
