@@ -2,38 +2,27 @@ function show(index) {
   document.getElementById('word-'+index).style.display = 'inline-block';
 }
 
-fetch('./new-words.txt')
-  .then(response => response.text())
+fetch('./words.json')
+  .then(response => response.json())
   .then(data => {
-
+    
     let table = '<table>'
-    let arr = data.split("\n")
-
-    arr.forEach(function(item, index) {
-
-      if (item.trim()=='') {
-        return;
-      }
-      
-      let word = item.split("=")
+    
+    data.forEach(function(item, index) {
 
       table += 
         `<tr>
           <td class="eng show" onclick="show(${index})">
-            ${word[0]}
+            ${item.english}
           </td>
 
-          <!--<td class="translate">
-            <span onclick="show(${index})" class="show">Show</span>
-          </td>-->
-
           <td class="search">
-            <a target="_blank" href="https://www.google.com/search?q=define+${word[0]}">Google</a>
+            <a target="_blank" href="https://www.google.com/search?q=define+${item.english}">Google</a>
           </td>
 
           <td class="bng">
             <span id="word-${index}" class="word" style="display: none;">
-              ${word[1]}
+              ${item.bangla}
             </span>
           </td>
         </tr>`
@@ -44,6 +33,6 @@ fetch('./new-words.txt')
     document.getElementById('app').innerHTML = table
   })
 
-fetch('https://nostalgic-bell-6b3f17.netlify.app/.netlify/functions/dbio?mode=read')
-  .then(response => response.json())
-  .then(data => console.log(data));
+// fetch('https://nostalgic-bell-6b3f17.netlify.app/.netlify/functions/dbio?mode=read')
+//   .then(response => response.json())
+//   .then(data => console.log(data));
