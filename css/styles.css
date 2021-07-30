@@ -27,6 +27,18 @@ td.translate, td.search {
   /* text-align: center; */
   cursor: pointer;
 }
+.popup{
+  /* width: 400px; */
+  margin-bottom: 20px;
+  border: #222 1px solid;
+  padding: 1em;
+  text-align: center;
+}
+input{
+  padding: 4px;
+  margin: 4px 0;
+  border: #222 1px solid;
+}
 @media screen and (max-width: 767px) {
   div.wrap {
     width: 100%;
