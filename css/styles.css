@@ -11,7 +11,7 @@ table {
 }
 td {
   font-size: 1em;
-  border: 1px solid #333;
+  border: 1px solid #ccc;
 }
 td.eng, td.bng, td.translate {
   width: 20%;
@@ -30,14 +30,19 @@ td.translate, td.search {
 .popup{
   /* width: 400px; */
   margin-bottom: 20px;
-  border: #222 1px solid;
+  border: #ccc 1px solid;
   padding: 1em;
   text-align: center;
 }
 input{
   padding: 4px;
   margin: 4px 0;
-  border: #222 1px solid;
+  border: #ccc 1px solid;
+  color: #ccc;
+  background-color: #222;
+}
+.search a{
+  color: #ccc;
 }
 @media screen and (max-width: 767px) {
   div.wrap {

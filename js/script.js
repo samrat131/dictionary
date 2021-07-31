@@ -1,5 +1,5 @@
-function show(index) {
-  document.getElementById('word-'+index).style.display = 'inline-block';
+function show(id) {
+  document.getElementById(id).style.display = 'inline-block';
 }
 
 // fetch('./words.json')
@@ -13,7 +13,7 @@ fetch('/.netlify/functions/db?mode=read')
 
       table += 
         `<tr>
-          <td class="eng show" onclick="show(${index})">
+          <td class="eng show" onclick="show('${item._id}')">
             ${item.english}
           </td>
 
@@ -22,7 +22,7 @@ fetch('/.netlify/functions/db?mode=read')
           </td>
 
           <td class="bng">
-            <span id="word-${index}" class="word" style="display: none;">
+            <span id="${item._id}" class="word" style="display: none;">
               ${item.bangla}
             </span>
           </td>
@@ -33,7 +33,3 @@ fetch('/.netlify/functions/db?mode=read')
 
     document.getElementById('app').innerHTML = table
   })
-
-// fetch('https://nostalgic-bell-6b3f17.netlify.app/.netlify/functions/dbio?mode=read')
-//   .then(response => response.json())
-//   .then(data => console.log(data));
