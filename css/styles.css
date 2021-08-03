@@ -28,11 +28,13 @@ td.translate, td.search {
   cursor: pointer;
 }
 .popup{
-  /* width: 400px; */
+  background-color: #222;
   margin-bottom: 20px;
   border: #ccc 1px solid;
   padding: 1em;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 input{
   padding: 4px;
@@ -43,6 +45,16 @@ input{
 }
 .search a{
   color: #ccc;
+}
+.frm-add {
+  display: flex;
+  justify-content: space-between;
+}
+.pull-right {
+  float: right;
+}
+.edit {
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   div.wrap {

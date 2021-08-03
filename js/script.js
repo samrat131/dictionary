@@ -2,7 +2,13 @@ function show(id) {
   document.getElementById(id).style.display = 'inline-block';
 }
 
-// fetch('./words.json')
+function update(id, eng, ban) {
+  document.getElementById('id').value = id;
+  document.getElementById('eng').value = eng;
+  document.getElementById('ban').value = ban;
+  document.getElementById('mode').value = 'update';
+}
+
 fetch('/.netlify/functions/db?mode=read')
   .then(response => response.json())
   .then(data => {
@@ -25,6 +31,9 @@ fetch('/.netlify/functions/db?mode=read')
             <span id="${item._id}" class="word" style="display: none;">
               ${item.bangla}
             </span>
+
+            <span class="edit pull-right" onclick="update('${item._id}','${item.english}','${item.bangla}')">&#9998;</span>
+
           </td>
         </tr>`
     })

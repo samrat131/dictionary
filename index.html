@@ -10,8 +10,9 @@
 
 	<div class="wrap">
 		<div class="popup">
-			<form action="/.netlify/functions/db" method="get">
-				<input type="hidden" name="mode" value="write">
+			<form class="frm-add" action="/.netlify/functions/db" method="get">
+				<input type="hidden" name="mode" id="mode" value="write">
+				<input type="hidden" name="id" id="id" value="">
 				
 				<div class="input-wrap">
 					<input autocomplete="off" type="text" name="eng" id="eng" placeholder="English">
@@ -26,14 +27,14 @@
 				</div>
 				
 				<div class="input-wrap">
-					<input type="submit" value="Add New Word">
+					<input type="submit" value=" Save ">
 				</div>
 				
 			</form>
 		</div>
+		
+		<div id="app"></div>
 	</div>
-
-	<div class="wrap" id="app"></div>
 
 	<script src="js/script.js"></script>
 </body>
