@@ -51,7 +51,6 @@ exports.handler = async function (event, context) {
 
     const objId = new ObjectId(id)
     const filter = { _id: objId };
-    // const options = { upsert: true };
     const updateDoc = {
       $set: {
         english: eng,
@@ -62,9 +61,50 @@ exports.handler = async function (event, context) {
     const result = await collection.updateOne(filter, updateDoc)
     client.close()
 
+    if (result.modifiedCount) {
+      return {
+        statusCode: 200,
+        body: 'Updated'
+      }
+    }
+
     return {
       statusCode: 200,
-      body: 'Updated'
+      body: 'Not Updated'
+    }
+  }
+
+  if (mode == 'delete') {
+
+    if (code != process.env.SECRET_CODE) {
+      return {
+        statusCode: 401,
+        body: 'Unauthorized'
+      }
+    }
+
+    if (id == null) {
+      return {
+        statusCode: 400,
+        body: 'Error, invalid ID'
+      }
+    }
+
+    const objId = new ObjectId(id)
+    const filter = { _id: objId };
+    const result = await collection.deleteOne(filter)
+    client.close()
+    
+    if (result.deletedCount === 1) {
+      return {
+        statusCode: 200,
+        body: 'Deleted'
+      }  
+    }
+
+    return {
+      statusCode: 200,
+      body: 'Not Deleted'
     }
   }
 

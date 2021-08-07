@@ -46,14 +46,14 @@ input{
 .search a{
   color: #ccc;
 }
-.frm-add {
+#frm-add {
   display: flex;
   justify-content: space-between;
 }
 .pull-right {
   float: right;
 }
-.edit {
+.edit,.delete {
   cursor: pointer;
 }
 @media screen and (max-width: 767px) {
