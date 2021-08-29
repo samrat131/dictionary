@@ -10,6 +10,7 @@ exports.handler = async function (event, context) {
   const ban = event.queryStringParameters.ban || null;
   const code = event.queryStringParameters.code || null;
   const mode = event.queryStringParameters.mode || 'read';
+  const memorized = event.queryStringParameters.mode || null;
 
   await client.connect()
   const db = client.db('dictionary')
@@ -51,11 +52,21 @@ exports.handler = async function (event, context) {
 
     const objId = new ObjectId(id)
     const filter = { _id: objId };
-    const updateDoc = {
-      $set: {
-        english: eng,
-        bangla: ban,
-      },
+
+    let updateDoc = {}
+    if (memorized) {
+      updateDoc = {
+        $set: {
+          memorized: true,
+        },
+      }
+    } else {
+      updateDoc = {
+        $set: {
+          english: eng,
+          bangla: ban,
+        },
+      }
     }
 
     const result = await collection.updateOne(filter, updateDoc)

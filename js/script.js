@@ -9,12 +9,25 @@ function update(id, eng, ban) {
   document.getElementById('mode').value = 'update';
 }
 
+function memorized(id) {
+  const code = prompt('Please input code')
+  if (code) {
+    document.getElementById('id').value = id;
+    document.getElementById('code').value = code;
+    document.getElementById('mode').value = 'update';
+    document.getElementById('memorized').value = 1;
+    document.getElementById('frm-add').submit();
+  }
+}
+
 function deleteItem(id) {
   const code = prompt('Please input code')
-  document.getElementById('id').value = id;
-  document.getElementById('code').value = code;
-  document.getElementById('mode').value = 'delete';
-  document.getElementById('frm-add').submit();
+  if (code) {
+    document.getElementById('id').value = id;
+    document.getElementById('code').value = code;
+    document.getElementById('mode').value = 'delete';
+    document.getElementById('frm-add').submit();
+  }
 }
 
 fetch('/.netlify/functions/db?mode=read')
@@ -24,11 +37,15 @@ fetch('/.netlify/functions/db?mode=read')
     let table = '<table>'
     
     data.forEach(function(item, index) {
+      
+      if (item.memorized === true) {
+        return
+      }
 
       table += 
         `<tr>
           <td class="eng show" onclick="show('${item._id}')">
-            ${item.english}
+            ${item.english} 
           </td>
 
           <td class="search">
@@ -40,9 +57,9 @@ fetch('/.netlify/functions/db?mode=read')
               ${item.bangla}
             </span>
 
-            <span class="delete pull-right" onclick="deleteItem('${item._id}')">&#128465;</span>
-            
-            <span class="edit pull-right" onclick="update('${item._id}','${item.english}','${item.bangla}')">&#9998;</span>
+            <span class="delete pull-right" onclick="deleteItem('${item._id}')">❌</span>
+            <span class="edit pull-right" onclick="memorized('${item._id}')">✅</span>
+            <span class="edit pull-right" onclick="update('${item._id}','${item.english}','${item.bangla}')">📝</span>
 
           </td>
         </tr>`
